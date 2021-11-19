@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+{{q['frm-orga'] | raw}}
+
+
+
+
+
+<form class ="ui form" action="{{path('orgas.submit')}}"method ="post">
+    <input type ="hidden" name = "id" value="{{orga.id}}">
+    <div class="ui input">
+        <input name = "name" type ="text" value="{{orga.name}}">
+    </div>
+    <button class="ui fluid green button"> Modifier </button>
+
+</form>
+
+
+
+</body>
+</html>
