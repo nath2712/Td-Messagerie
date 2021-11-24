@@ -30,20 +30,15 @@ class Organization{
 	private $aliases;
 
 	
-	#[OneToMany(mappedBy: "organization",className: "models\\Groupe")]
-	private $groupes;
-
-	
-	#[OneToMany(mappedBy: "organization",className: "models\\Organizationsettings")]
-	private $organizationsettingss;
+	#[OneToMany(mappedBy: "organization",className: "models\\Group")]
+	private $groups;
 
 	
 	#[OneToMany(mappedBy: "organization",className: "models\\User")]
 	private $users;
 
 	 public function __construct(){
-		$this->groupes = [];
-		$this->organizationsettingss = [];
+		$this->groups = [];
 		$this->users = [];
 	}
 
@@ -79,30 +74,17 @@ class Organization{
 		$this->aliases=$aliases;
 	}
 
-	public function getGroupes(){
-		return $this->groupes;
+	public function getGroups(){
+		return $this->groups;
 	}
 
-	public function setGroupes($groupes){
-		$this->groupes=$groupes;
+	public function setGroups($groups){
+		$this->groups=$groups;
 	}
 
-	 public function addToGroupes($groupe){
-		$this->groupes[]=$groupe;
-		$groupe->setOrganization($this);
-	}
-
-	public function getOrganizationsettingss(){
-		return $this->organizationsettingss;
-	}
-
-	public function setOrganizationsettingss($organizationsettingss){
-		$this->organizationsettingss=$organizationsettingss;
-	}
-
-	 public function addToOrganizationsettingss($organizationsetting){
-		$this->organizationsettingss[]=$organizationsetting;
-		$organizationsetting->setOrganization($this);
+	 public function addToGroups($group){
+		$this->groups[]=$group;
+		$group->setOrganization($this);
 	}
 
 	public function getUsers(){

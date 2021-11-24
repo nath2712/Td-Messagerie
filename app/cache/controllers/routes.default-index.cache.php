@@ -1,2 +1,2 @@
 <?php
-return array("orgas"=>["/orgas/update/(.+?)/","/orgas/(.+?)/"]);
+return array("crud"=>["/crud/(.+?)/showDetail/(.+?)/","/crud/(.+?)/showModelClick/(.+?)/","/crud/(.+?)/updateMember/(.+?)/(.*?)","/crud/(.+?)/refresh_/","/crud/(.+?)/edit/(.*?)","/crud/(.+?)/newModel/(.*?)","/crud/(.+?)/editMember/(.+?)/","/crud/(.+?)/display/(.*?)","/crud/(.+?)/delete/(.+?)/","/crud/(.+?)/refreshTable/(.*?)","/crud/(.+?)/updateModel/","/crud/(.+?)/detailClick/(.+?)/(.*?)","/crud/(.+?)/(index/)?"]);
