@@ -1,0 +1,26 @@
+
+<div class="ui container page-container">
+	<div id="page-container">
+		<p></p>
+		<div id="" class="ui error icon message">
+			<i class="warning circle icon"></i>
+			<div class="content">
+				<div class="header">
+					Accès interdit !
+				</div>
+				Vous n'êtes pas autorisé à accéder à cette page (/).
+			</div>
+		</div>
+
+		<a href="MyAuth/index" data-target="#page-container" class="ui inverted button ajax _login"><i class="icon sign in"></i>Se connecter à l'application</a>
+		<h1 class="ui center aligned icon header inverted disabled">
+			<i class="huge circular sticky users icon"></i>
+			Groups
+		</h1>
+	</div>
+</div>
+{% block script %}
+	{% if hasScript %}
+	{{script_foot | raw}}
+	{% endif %}
+{% endblock %}
